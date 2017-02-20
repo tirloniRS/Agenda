@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="left">
 
         <TextView
             android:id="@+id/item_nome"
@@ -32,7 +32,7 @@
             android:text="Telefone"
             android:textSize="16sp"
             android:paddingTop="8dp"
-            android:paddingLeft="10dp"/>
+            android:paddingLeft="10dp" />
 
 
     </LinearLayout>
