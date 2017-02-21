@@ -14,12 +14,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.List;
 
 import apps.tirloni.com.agenda.adapter.AlunosAdapter;
-import apps.tirloni.com.agenda.converter.AlunoConverter;
 import apps.tirloni.com.agenda.dao.AlunoDao;
 import apps.tirloni.com.agenda.modelo.Aluno;
 
@@ -84,20 +82,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu_enviar_notas:
-                AlunoDao dao = new AlunoDao(this);
-                List<Aluno> alunos = dao.buscaAlunos();
-                dao.close();
-
-                AlunoConverter conversor =new AlunoConverter();
-                String json = conversor.converteParaJSON(alunos);
-
-                // fazer requisição
-                WebClient client = new WebClient();
-                String resposta = client.post(json);
-
-
-
-                Toast.makeText(this,resposta, Toast.LENGTH_LONG).show();
+                new EnviaAlunosTask(this).execute();
                 break;
         }
         return super.onOptionsItemSelected(item);
