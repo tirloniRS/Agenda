@@ -9,4 +9,5 @@
     <string name="formulario_endereco">Endereço</string>
     <string name="formulario_telefone">Telefone</string>
     <string name="formulario_site">Site</string>
+    <string name="menu_baixar_provas">Baixar provas</string>
 </resources>

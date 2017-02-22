@@ -7,5 +7,11 @@
         android:icon="@drawable/ic_enviar"
         app:showAsAction="always"
         />
+    <item
+        android:id="@+id/menu_baixar_provas"
+        android:title="@string/menu_baixar_provas"
+        android:icon="@drawable/ic_receber"
+        app:showAsAction="always"
+        />
 
 </menu>

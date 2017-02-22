@@ -2,8 +2,11 @@ package apps.tirloni.com.agenda;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,6 +33,15 @@ public class ProvasActivity extends AppCompatActivity {
         ListView lista = (ListView) findViewById(R.id.provas_lista);
         lista.setAdapter(adapter);
 
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Prova prova = (Prova) parent.getItemAtPosition(position);
+                Toast.makeText(ProvasActivity.this, "Clicou na prova de " + prova, Toast.LENGTH_SHORT ).show();
+            }
+        });
+
     }
+
 
 }
