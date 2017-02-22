@@ -9,4 +9,6 @@
     <string name="formulario_telefone">Telefone</string>
     <string name="formulario_site">Site</string>
     <string name="menu_baixar_provas">Baixar provas</string>
+    <string name="detalhes_prova_materia">Matéria</string>
+    <string name="detalhes_prova_data">Data</string>
 </resources>
